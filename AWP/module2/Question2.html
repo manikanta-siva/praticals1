@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student_form</title>
+    </head>
+    <script>
+        //java script validation function
+        function validateForm(){
+        var n=document.forms["studentForm"]["name"].value;
+        var r=document.forms["studentForm"]["roll"].value;
+        var a=document.forms["studentForm"]["age"].value;
+        var m=document.forms["studentForm"]["mail"].value;
+        
+        //check for empty feilds
+        if(n==""|| r== "" || a=="" || m==""){
+            alert("please fill out all fields");
+            return false;
+        }
+         // check age is a number
+          if(isNAN(a)){
+            alert("age is must be number");
+            return false;
+          }
+          // check mail_id 
+          if(!validatemail(m)){
+            alert("please enter validate email id");
+            return false;
+          }
+         // function validate mail format
+         function validatemail(m){
+            var re=/\s+@\s+\.\s+/;
+            return re.test(m);
+         }
+        }
+
+    </script>
+    <body>
+        <h1>student Form</h1>
+        <form name="studentForm">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"> <br>
+        <label for="roll">Rollno:</label>
+        <input type="text" name="roll" id="roll"> <br>
+        <label for="age">Age:</label>
+        <input type="text" name="age" id="age"> <br>
+        <label for="mail">Mail_id</label>
+        <input type="text" name="mail_id" id="mail"> <br>
+        <button onclick=validateForm()>submit</button>
+    </form>
+    </body>
+</html>

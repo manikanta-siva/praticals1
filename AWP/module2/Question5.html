@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+       <head><title>
+            Jquery
+        </title>
+        <script src="j.js"></script>
+        <script>
+            $(document).ready(function name() {
+             $('.m').text("who are you");
+            $('.m').css("background-color","red").css("color",'blue');
+            $('p').css({"color":"red","background-color":"black"});
+            $('#hi').click(function(){
+
+            
+            $('p').hide(3000);
+             })
+             $('#sh').click(function(){
+            $('p').show(3000);
+             })
+            $('#hs').click(function(){
+            $('p').toggle(3000)
+            });
+            $('#an').click(function(){
+              $('.b2').toggle(3000)
+            })
+          });
+          
+          
+          
+        </script>
+        <style>
+          .b2{
+            border-style: solid;
+            width: 150px;
+            height:100px;
+            border-color: darkturquoise;
+          }
+        </style>
+        </head>
+    <body>
+      <h1 class="B">Jquery</h1>
+      <h1 id="c"></h1>
+      <h1 class="m"></h1>
+      <h1></h1>
+      <h1></h1>
+
+      <p>This is jquesry class</p>
+      <p>This is jquesry class</p>
+      <p>This is jquesry class</p>
+      <p>This is jquesry class</p>
+      <p>This is jquesry class</p>
+      <script>
+       
+      
+      </script>
+      
+      <button id="hi">Hide</button>
+      <button id="sh">show</button>
+      <button id="hs">hide and show</button>
+      <div class="b2"></div>
+      <button id="an">Animation</button>
+    </body>
+</html>
